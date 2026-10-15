@@ -1,0 +1,21 @@
+name: Build Palomar submission
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: leanprover/lean-action@v1
+        with:
+          build: "true"
+          build-args: "Challenge Solution"
+          use-github-cache: "true"
+          use-mathlib-cache: "true"
