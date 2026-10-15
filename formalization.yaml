@@ -5,20 +5,19 @@
 version: "v0.4"
 
 project:
-  name: "TEMPLATE: name of the formalization"
+  name: "Erdos 99 Partial Solution"
   description: >-
-    TEMPLATE: concise public account of the mathematical content and principal
-    results of the formalization
+    TEMPLATE: A formalization of a partial solution to Erdos Problem 99. It shows that Erdos Problem 99 holds for all sufficiently large n where h(n) is finite. Here, h(n) denotes the number of incongruence, diameter-minimizing sets of minimum separation at least 1.
   # Required nonempty list of name strings or mappings with a nonempty name.
   authors:
-    - "TEMPLATE: formalizer name"
+    - "Naveen Stewart"
   # Required root licence. Keep this in sync with the Apache-2.0 LICENSE file.
   license: "Apache-2.0"
   # Required nonempty list of name strings or mappings with a nonempty name.
   # For a thin wrapper, name people responsible for this submitted wrapper;
   # submission authorization separately covers the underlying formalization.
   responsible_maintainers:
-    - "TEMPLATE: person responsible for this formalization"
+    - "Naveen Stewart"
 
 # Omit repository for an ordinary project: Palomar treats this submitted
 # repository as the substantive proof development. If this repository is only
@@ -32,8 +31,8 @@ project:
 classification:
   # Use 1–2 official arXiv identifiers such as math.LO and 1–8 five-character
   # MSC 2020 identifiers such as 03B35.
-  arxiv: ["TEMPLATE: official arXiv identifier such as math.LO"]
-  msc2020: ["TEMPLATE: five-character MSC 2020 identifier such as 03B35"]
+  arxiv: ["math.CO"]
+  msc2020: ["52C10"]
 
 sources:
   # Sources must be nonempty. Every source needs a title and relationship; the
@@ -58,68 +57,55 @@ sources:
   # - title: "TEMPLATE: describe the result first presented here"
   #   type: original-proof
   #   relationship: other
-  - title: "TEMPLATE: title of the mathematical source"
+  - title: "Erdos Problem 99 with Finite Multiplicity"
     authors:
-      - "TEMPLATE: source author"
-    contributors:
-      - name: "TEMPLATE: source contributor"
-        role: "TEMPLATE: contributor role, for example editor or problem-proposer"
-    id: "TEMPLATE: stable identifier or versioned URL"
-    type: "TEMPLATE: concise source kind, for example article, book, or formalization"
-    location: "TEMPLATE: stable URL or bibliographic location, if available"
-    relationship: "TEMPLATE: formalizes, adapts, independently-proves, background, or other"
-    note: "TEMPLATE: explain relationship or author_endorsement: other; otherwise remove"
-    license: "TEMPLATE: source license or unknown"
-    author_endorsement: "TEMPLATE: participated, endorsed, no-response, not-contacted, declined, n/a, or other"
-
-related_formalizations:
-  # Remove this field or use [] when none are known.
-  - id: "TEMPLATE: stable URL or identifier for earlier formalization"
-    relationship: "TEMPLATE: builds-on, adapts, independent, supersedes, or other"
-    note: "TEMPLATE: explain the relationship"
+      - "Naveen Stewart"
+    id: "https://zenodo.org/records/23387136"
+    type: "article"
+    location: "https://zenodo.org/records/23387136"
+    relationship: "formalizes"
+    license: "CC-BY-4.0"
+    author_endorsement: "participated"
 
 status:
   scope: >-
-    TEMPLATE: state exactly what is and is not formalized, including any weaker
-    theorem, changed hypotheses, or omitted material.
+    TEMPLATE: Proves Erdos Problem 99 for finite h(n). The infinite h(n) case is still open.
   # Count the proof development, excluding Challenge.lean's deliberate sorry.
   # Replace each count with an unquoted nonnegative integer, for example 0.
-  sorry_count: "TEMPLATE: unquoted nonnegative integer"
-  sorry_in_definitions: "TEMPLATE: unquoted nonnegative integer"
-  axioms: ["TEMPLATE: declaration names, or replace this list with []"]
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: []
   # status.main_results is optional. Add it only when a short curated
   # project-level list is useful; it need not mirror Comparator declarations.
 
 automation:
   methods:
-    - method: "TEMPLATE: manual, copilot, agent, autonomous, or other"
-      models: ["TEMPLATE: model names, or replace this list with []"]
-      framework: "TEMPLATE: framework name, or n/a"
-      tool_setup: "TEMPLATE: exact detail, such as AI-assisted, editors, tactics, agents, or other tools used"
+    - method: "agent"
+      models: ["Aristotle"]
+      framework: "Harmonic Aristotle API"
+      tool_setup: "Inputted finished manuscript for Lean 4 formalization."
       cost:
-        wall_time: "TEMPLATE: approximate elapsed effort"
-        spend_usd: "TEMPLATE: amount, subscription-based, or not tracked"
-        hardware: "TEMPLATE: local machine, API-only, or other"
-      prompting_notes: "TEMPLATE: representative prompting notes, or n/a"
-  spend_usd: "TEMPLATE: total amount, subscription-based, or not tracked"
-  notes: "TEMPLATE: describe the overall human and automation workflow"
+        wall_time: "10 hours"
+        spend_usd: 0
+        hardware: "API-only"
+      prompting_notes: "n/a"
+  spend_usd: "not tracked"
 
 fidelity:
-  divergences: "TEMPLATE: all known divergences from the cited source, or none known"
+  divergences: "none known"
 
 review:
-  status: "TEMPLATE: honest review status, for example self-assessed"
-  reviewers:
-    - "TEMPLATE: reviewer name, or none"
-  notes: "TEMPLATE: describe statement audits and mathematical review performed"
+  status: "self-assessed"
+  reviewers: []
+  notes: "Ensured the Lean 4 compiled without sorries after proving the work myself."
 
 alignment:
-  namespace: "TEMPLATE: project namespace"
+  namespace: "Erdos-99-Partial"
   statements:
-    - source: "TEMPLATE: source theorem or section"
-      lean: "TEMPLATE: fully qualified Lean declaration"
-      module: "TEMPLATE: Lean module containing the declaration"
-      status: "TEMPLATE: proved, partial, adapted, or other honest description"
-      note: "TEMPLATE: explain the correspondence and any qualifications"
+    - source: "Theorem 1.1"
+      lean: "erdos99_finite_multiplicity"
+      module: "Solution"
+      status: "proved"
+      note: "the overall formalization and proof of the partial result"
 
-acknowledgements: "TEMPLATE: libraries, tools, and people to credit"
+acknowledgements: []
