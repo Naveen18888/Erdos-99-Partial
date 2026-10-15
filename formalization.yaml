@@ -7,7 +7,7 @@ version: "v0.4"
 project:
   name: "Erdos 99 Partial Solution"
   description: >-
-    TEMPLATE: A formalization of a partial solution to Erdos Problem 99. It shows that Erdos Problem 99 holds for all sufficiently large n where h(n) is finite. Here, h(n) denotes the number of incongruence, diameter-minimizing sets of minimum separation at least 1.
+    A formalization of a partial solution to Erdos Problem 99. It shows that Erdos Problem 99 holds for all sufficiently large n where h(n) is finite. Here, h(n) denotes the number of incongruence, diameter-minimizing sets of minimum separation at least 1.
   # Required nonempty list of name strings or mappings with a nonempty name.
   authors:
     - "Naveen Stewart"
@@ -69,7 +69,7 @@ sources:
 
 status:
   scope: >-
-    TEMPLATE: Proves Erdos Problem 99 for finite h(n). The infinite h(n) case is still open.
+    Proves Erdos Problem 99 for finite h(n). The infinite h(n) case is still open.
   # Count the proof development, excluding Challenge.lean's deliberate sorry.
   # Replace each count with an unquoted nonnegative integer, for example 0.
   sorry_count: 0
