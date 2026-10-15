@@ -100,12 +100,12 @@ review:
   notes: "Ensured the Lean 4 compiled without sorries after proving the work myself."
 
 alignment:
-  namespace: "Erdos-99-Partial"
+  namespace: "Erdos99"
   statements:
     - source: "Theorem 1.1"
-      lean: "erdos99_finite_multiplicity"
+      lean: "Erdos99.erdos99_finite_multiplicity"
       module: "Solution"
       status: "proved"
-      note: "the overall formalization and proof of the partial result"
+      note: "Finite Multiplicity Case"
 
 acknowledgements: []
