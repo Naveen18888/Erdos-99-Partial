@@ -1,0 +1,16 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "Erdos99.erdos99_finite_multiplicity",
+    "Erdos99.erdos99_finite_multiplicity_explicit",
+    "Erdos99.erdos99_of_finite_multiplicity"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}
